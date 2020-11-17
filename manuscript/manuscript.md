@@ -1,4 +1,4 @@
-Untitled
+Analyses on the classification of urbanized regions
 ================
 17 november, 2020
 
@@ -6,9 +6,19 @@ This manuscript uses the Workflow for Open Reproducible Code in Science (Van Lis
 
 This is an example of a non-essential citation (Van Lissa et al. 2020). If you change the rendering function to `worcs::cite_essential`, it will be removed.
 
-## GitHub Documents
+## Introduction
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+This project focused on the Sustainable Development Goals, which were created in 2015 by the United Nations. These goals serve the purpose of improving the world and should be achieved by 2030. Recently, the Global Data Lab (GDL) conducted household surveys in various subnational regions to collect data on several socioeconomic, health and demographic variables. The current dataset created by the GDL contains 126 indicators for 1337 subregions in 128 countries. A subset of the data will be used to answer the question 'How well can highly urbanized regions versus lowly urbanized regions be classified?'.
+
+## Methods
+
+How was the sample size determined, which data exclusions were used, all manipulations
+
+## Participants
+
+Who are the participants in the study
+
+## Procedure
 
 ## Results
 
@@ -69,7 +79,7 @@ table(urban_forest_preds, scaled_urban_data[-train,3])
     ##               high   18   3
     ##               low     3  30
 
-## Conclusion
+## Discussion
 
 Here comes a conclusion
 
