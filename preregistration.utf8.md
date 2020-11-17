@@ -1,7 +1,7 @@
 ---
 title           : "My preregistration for AsPredicted.org"
 shorttitle      : "My preregistration"
-date            : "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%d\\\\. %B %Y')`"
+date            : "17\\. November 2020"
 
 author: 
   - name        : Jannick Akkermans
