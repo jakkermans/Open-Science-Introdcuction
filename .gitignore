@@ -10,3 +10,5 @@
 *.log
 *.tex
 .Rproj.user
+!scaled_urban_data.csv
+!codebook_scaled_urban_data.csv

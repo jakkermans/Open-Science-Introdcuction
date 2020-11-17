@@ -1,3 +1,8 @@
 worcs_version: 0.1.5
 creator: Janni
 entry_point: manuscript/manuscript.Rmd
+checksums:
+  scaled_urban_data.csv: 94d73702f6bdefaf510e89a117f288ef
+data:
+  scaled_urban_data.csv:
+    codebook: codebook_scaled_urban_data.Rmd
