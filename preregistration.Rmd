@@ -6,14 +6,10 @@ date            : "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%d\\\\.
 author: 
   - name        : Jannick Akkermans
     affiliation : 1
-  - name        : Ernst-August Doelle
-    affiliation : "1,2"
 
 affiliation:
   - id          : 1
-    institution : Wilhelm-Wundt-University
-  - id          : 2
-    institution : Konstanz Business School
+    institution : Utrecht University
 
 output: prereg::aspredicted_prereg
 ---
@@ -24,54 +20,53 @@ output: prereg::aspredicted_prereg
 ## Existing data
 <!-- Have any data been collected for this study already? Note: You must answer 'No' to submit this pre-registration at AsPredicted.org. -->
 
-**Yes**, at least some data have been collected for this study already
-
-**No**, no data have been collected for this study yet
-
+**Yes**, some data was provided at the start of the project
 
 ## Hypothesis
 <!-- What's the main question being asked or hypothesis being tested in this study? Providing a short name for each hypothesis (e.g. H1, H2, etc.) will later allow you to easily relate your hypotheses to statistical tests in your analysis plan. -->
 
-> Example: A month-long academic summer program for disadvantaged kids will reduce the drop in academic performance that occurs during the summer.
-
+> The main question is 'How well can highly urbanized regions versus lowly urbanized regions be classified?'. The corresponding hypothesis (H1) is that an accuracy higher than 50% will be achieved. This accuracy of 50% would be achieved if a classifier assigned one of the two classes to each case.
 
 ## Dependent variable
 <!-- Describe the key dependent variable(s) specifying how they will be measured. -->
 
-> Example: Simple average GPA across all courses during the first semester after the intervention.
+> A variable indicating whether a region has high urbanization (more than 80% of the region is urbanized) or low urbanization (less than 20% of the region is urbanized).
 
 
 ## Conditions
 <!-- How many and which conditions will participants be assigned to? -->
 
-> Example 1: Two conditions: Offering summer program: yes vs no.
-
-> Example 2: 12 conditions in a mixed design lab study. Participants will be assigned to one of four conditions: math training, verbal training, memory task, or control (4 between-subject conditions). Each participant will complete a math test, a verbal test, and a memory test (3 within-subject conditions).
+> None
 
 
 ## Analyses
 <!-- Specify exactly which analyses you will conduct to examine the main question/hypothesis. -->
 
-> Example: Linear regression predicting the simple average GPA in the semester after the intervention with a dummy variable indicating whether the participant was offered the summer program or not (intention-to-treat analysis). We will also conduct the same regression controlling for simple average GPA during the semester before the intervention, gender, & household income (an 8-point scale ranging from 1 = below $20,000 and 8 = above $150,000).
+> The hypothesis will be tested by means of two classification algorithms. The first algorithm is logistic regression in which the urbanization will be predicted using the remaining variables as predictors. The second classification algorithm is a random forest. This algorithm will also predict urbanization using the remaing variables as predictors. The random forest will contain 2000 decision trees. 
+
+> For each classification algorithm, the performance is based on the achieved accuracy, i.e. the proportion of correctly classified cases.
+
+> For each classification algorithm, the data will be split into a training set and a test set, with a division of 75/25 respectively. Therefore, 75% of the data will be assigned to the training set and 25% to the test set. The algorithm will subsequently be trained using the training data and then applied to the test set.
+
+> Before the analyses, the data are scaled so that the scales are approximately equal.
 
 
 ## More analyses
 <!-- Any secondary analyses? -->
 
-> Example: The effect may be larger for boys and for children living with one rather than two parents/guardians.
+> None
 
 
 ## Sample Size
 <!-- How many observations will be collected or what will determine sample size? No need to justify decision, but be precise about _exactly_ how the number will be determined. -->
 
-> Example: We will offer the program until 500 people have agreed to participate in it or until June 30, 2016 (whichever comes first).
+> Data from 1337 regions has been collected by the Global Data Lab. At the start of the project, data from 217 regions has been provided. Therefore, the sample size is 217.
 
 
 ## Other
 <!-- Anything else you would like to pre-register? (e.g., data exclusions, variables collected for exploratory purposes, unusual analyses planned?) -->
 
-> Example: We will include a battery of questions for exploratory purposes, including life satisfaction, amount of videogame playing, and family activity. We will also provide an additional survey with 24 questions assessing achievement orientation.We will not report the results of those analyses for the project being pre-registered.
-
+> Categorical variables other than the urbanization variable will be removed from the dataset. The random forest classifier has trouble with such predictors, which is why they are removed from the dataset before the analyses are conducted.
 
 # References
 ## 
